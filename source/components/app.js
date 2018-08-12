@@ -7,7 +7,7 @@ export default {
 	name: "App",
 	components: {StyleComponent, Form},
 	template: `
-		<div class="container">
+		<div class="container-fluid">
 			<StyleComponent>${AppStyle}</StyleComponent>
 			<Form></Form>
 		</div>
