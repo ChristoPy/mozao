@@ -63,7 +63,7 @@ export default {
 		}
 	},
 	template: `
-		<div class="container">
+		<div>
 			<template v-if="Granted"><Slides></Slides></template>
 			<template v-else="">
 				<form class="form-signin">
