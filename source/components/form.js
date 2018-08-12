@@ -1,3 +1,4 @@
+import Slides from "./slides.js";
 import StyleComponent from "./style-component.js";
 import FormStyle from "./../styles/form-style.js";
 
@@ -9,13 +10,13 @@ export default {
 
 		return {
 
-			Password: "",
+			Password: "senha",
 			TypedPassword: "",
 			Disabled: true,
 			Granted: false
 		}
 	},
-	components: {StyleComponent},
+	components: {Slides, StyleComponent},
 	methods: {
 
 		BindTypedPassword (Event) {
@@ -33,11 +34,11 @@ export default {
 	},
 	template: `
 		<div class="container">
-			<template v-if="Granted"></template>
+			<template v-if="Granted"><Slides></Slides></template>
 			<template v-else="">
-				<StyleComponent>${FormStyle}</StyleComponent>
-
 				<form class="form-signin">
+					<StyleComponent>${FormStyle}</StyleComponent>
+
 					<h1 class="h3 mb-3 font-weight-normal text-center">Qual a senha?</h1>
 					<input type="password" id="inputPassword" class="form-control mb-3" placeholder="Senha" required="" @input="BindTypedPassword">
 					<button class="btn btn-lg btn-primary btn-block" type="submit" @click="Login" :disabled="Disabled">Entrar</button>
