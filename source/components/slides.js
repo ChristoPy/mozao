@@ -9,25 +9,29 @@ export default {
 
 		return {
 
-			Images: [],
-			Slides: undefined
+			Slides: [],
+			TinySlider: undefined
 		}
 	},
 	components: {StyleComponent},
 	template: `
 		<div>
-			<StyleComponent></StyleComponent>
-
 			<div class="Slides">
-				<template v-for="Image of Images">
-					<img :src="Image" alt="" />
+				<template v-for="Slide of Slides">
+					<div>
+					<img :src="Slide.Image" class="img-fluid" alt=""/>
+
+					<template v-if="Slide.Text">
+						<div class="SlideText">{{Slide.Text}}</div>
+					</template>
+					</div>
 				</template>
 			</div>
 		</div>
     `,
     mounted () {
 
-		this.Slides = new tns ({
+		this.TinySlider = new tns ({
 
 			container: ".Slides",
 			items: 1,
