@@ -9,20 +9,29 @@ export default {
 
 		return {
 
-			Slides: [],
+			Slides: [
+				{
+					Image: "https://source.unsplash.com/collection/502925/1680x800",
+					Text: "Some Text"
+				}
+			],
 			TinySlider: undefined
 		}
 	},
 	components: {StyleComponent},
 	template: `
 		<div>
+			<StyleComponent>${SlidesStyle}</StyleComponent>
+
 			<div class="Slides">
 				<template v-for="Slide of Slides">
 					<div>
 					<img :src="Slide.Image" class="img-fluid" alt=""/>
 
 					<template v-if="Slide.Text">
-						<div class="SlideText">{{Slide.Text}}</div>
+						<div class="SlideText">
+							{{Slide.Text}}
+						</div>
 					</template>
 					</div>
 				</template>
