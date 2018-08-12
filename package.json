@@ -1,0 +1,14 @@
+{
+  "name": "mozao",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "browser-sync start --server 'source' --files 'source' --single"
+  },
+  "author": "Christopher Ribeiro <christo_campiglia@hotmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.24.6"
+  }
+}
