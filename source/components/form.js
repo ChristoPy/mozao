@@ -1,5 +1,5 @@
-import Slides from "./slides.js";
 import StyleComponent from "./style-component.js";
+import Slides from "./slides.js";
 import FormStyle from "./../styles/form-style.js";
 
 
