@@ -10,7 +10,7 @@ export default {
 
 		return {
 
-			Password: "senha",
+			Password: "",
 			TypedPassword: "",
 			Disabled: true,
 			Granted: false
