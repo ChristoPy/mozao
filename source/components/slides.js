@@ -9,12 +9,7 @@ export default {
 
 		return {
 
-			Slides: [
-				{
-					Image: "https://source.unsplash.com/collection/502925/1680x800",
-					Text: "Some Text"
-				}
-			],
+			Slides: [],
 			TinySlider: undefined
 		}
 	},
@@ -26,13 +21,13 @@ export default {
 			<div class="Slides">
 				<template v-for="Slide of Slides">
 					<div>
-					<img :src="Slide.Image" class="img-fluid" alt=""/>
+						<img :src="Slide.Image" class="img-fluid" alt=""/>
 
-					<template v-if="Slide.Text">
-						<div class="SlideText">
-							{{Slide.Text}}
-						</div>
-					</template>
+						<template v-if="Slide.Text">
+							<div class="SlideText">
+								{{Slide.Text}}
+							</div>
+						</template>
 					</div>
 				</template>
 			</div>
@@ -48,7 +43,8 @@ export default {
 			controls: false,
 			nav: false,
 			autoplayButton: false,
-			autoplayButtonOutput: false
+			autoplayButtonOutput: false,
+			speed: 600
 		});
     }
 };
