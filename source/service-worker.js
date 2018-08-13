@@ -8,6 +8,7 @@ const ROUTES = [
 
 	"/",
 	"index.html",
+	"manifest.json",
 	"dependencies/bootstrap.min.css",
 	"dependencies/tiny-slider.css",
 	"dependencies/vue.js",
@@ -19,9 +20,16 @@ const ROUTES = [
 	"components/form.js",
 	"components/slides.js",
 	"components/style-component.js",
+	"helpers/CachePolyfill.js",
 	"styles/app-style.js",
 	"styles/form-style.js",
-	"styles/slides-style.js"
+	"styles/slides-style.js",
+	"images/icons/icon192.png",
+	"images/icons/icon168.png",
+	"images/icons/icon144.png",
+	"images/icons/icon96.png",
+	"images/icons/icon72.png",
+	"images/icons/icon48.png"
 ];
 
 
