@@ -76,11 +76,9 @@ function MinifyScripts () {
 		const FileContent = FileSystem.readFileSync (__dirname + "/source/" + Script, "utf-8");
 		const Minified = JSMinifier.minify (FileContent).code;
 
-		Minified.replace (/dependencies\/vue\.js/, "dependencies/vue.min.js");
-
 		try {
 
-			FileSystem.writeFileSync (__dirname + "/" + PRODUCTION_PATH + Script, Minified);
+			FileSystem.writeFileSync (__dirname + "/" + PRODUCTION_PATH + Script, Minified.replace (/dependencies\/vue\.js/, "dependencies/vue.min.js"));
 		}
 		catch (SomeError) {
 
