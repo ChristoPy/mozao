@@ -4,11 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "browser-sync start --server 'source' --files 'source' --single"
+    "start": "browser-sync start --server 'source' --files 'source' --single",
+    "build": "node build.js"
   },
   "author": "Christopher Ribeiro <christo_campiglia@hotmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "browser-sync": "^2.24.6"
+    "browser-sync": "^2.24.6",
+    "html-minifier": "^3.5.19",
+    "terser": "^3.8.1"
   }
 }
