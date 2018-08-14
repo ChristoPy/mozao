@@ -1,7 +1,7 @@
 {
   "name": "mozao",
   "version": "1.0.0",
-  "description": "Using my dating anniversary to study web modules, PWA e Vue with no webpack",
+  "description": "Using my dating anniversary to study web modules, PWA and Vue with no webpack",
   "main": "index.js",
   "scripts": {
     "start": "browser-sync start --server 'source' --files 'source' --single",
